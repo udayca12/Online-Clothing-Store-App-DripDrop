@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop" />
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Big Centered Logo -->
+        <ImageView
+            android:id="@+id/logoDripDrop"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/logo_dripdrop"
+            android:contentDescription="@string/logo_desc"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp"/>
+
+        <!-- Brand Name Below Logo -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DRIPDROP"
+            android:textColor="#222222"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:letterSpacing="0.14"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/logoDripDrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Tagline Below Brand Name -->
+        <TextView
+            android:id="@+id/tvRightAddressForShopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:text="@string/rightAddress"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="#CE93D8"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <!-- Register Button Below Tagline -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonRegisterAccountOptions"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toBottomOf="@id/tvRightAddressForShopping"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_gradient"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:textAllCaps="true"
+            android:text="Register"/>
+
+        <!-- Login Button Below Register Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLoginAccount"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterAccountOptions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_gradient_login"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:textAllCaps="true"
+            android:text="Login" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
