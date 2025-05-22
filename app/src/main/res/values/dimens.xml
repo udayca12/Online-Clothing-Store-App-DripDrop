@@ -4,4 +4,5 @@
 
     <dimen name="smallButtonHeight">55dp</dimen>
     <dimen name="buttonCorners">15dp</dimen>
+    <dimen name="editTextHeight">60dp</dimen>
 </resources>
