@@ -35,16 +35,16 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:src="@drawable/logo_dripdrop"
+                    android:layout_width="42dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/drip_drop2"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
                     android:id="@+id/tvShoppingTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DripDrop Store"
+                    android:text="DRIPDROP Store"
                     android:textSize="22sp"
                     android:textColor="#222222"
                     android:textStyle="bold" />
