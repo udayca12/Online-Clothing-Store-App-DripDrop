@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#CE93D8"/> <!-- Use your accent color -->
+            <size android:width="40dp" android:height="40dp"/>
+            <stroke android:width="2dp" android:color="#B39DDB"/>
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/>
+            <size android:width="40dp" android:height="40dp"/>
+            <stroke android:width="2dp" android:color="#CE93D8"/>
+        </shape>
+    </item>
+</selector>

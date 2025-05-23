@@ -48,5 +48,39 @@
     <dimen name="h2TextSize">17sp</dimen>
     <dimen name="h3TextSize">22sp</dimen>
 
+    <!-- Size Radio Buttons -->
+    <style name="SizeRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/radio_size_selector</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Quantity Buttons -->
+    <style name="QuantityButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/round_button_bg</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#222222</item>
+    </style>
+    <!-- Gradient Button Style -->
+    <style name="Button.Gradient" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_gradient</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!-- Outline Button Style -->
+    <style name="Button.Outline" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_outline</item>
+        <item name="android:textColor">#CE93D8</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+
 
 </resources>
