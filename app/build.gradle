@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -9,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.dripdropapp"
-        minSdk 21
+        minSdk 26
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -34,26 +36,24 @@ android {
 
 dependencies {
 
-//    implementation 'androidx.core:core-ktx:1.7.0'
-//    implementation 'androidx.appcompat:appcompat:1.7.0'
-//    implementation 'com.google.android.material:material:1.12.0'
-//    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
-//    testImplementation 'junit:junit:4.13.2'
-//    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
 
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1' // Updated from 1.0.0
+    implementation 'androidx.appcompat:appcompat:1.5.1' 
     implementation 'com.google.android.material:material:1.7.0' // Added Material Design
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Updated from 1.1.3
 
-    // Firebase dependencies (downgraded versions)
-    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0' // Downgraded from 23.2.0
+    implementation 'com.google.firebase:firebase-auth:21.1.0' // latest version for Auth
+    implementation 'com.google.firebase:firebase-database:20.3.0' // for Realtime DB
+
+
+//    // Firebase dependencies (downgraded versions)
+//    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0' // Downgraded from 23.2.0
     implementation 'com.google.firebase:firebase-bom:30.5.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
     implementation 'com.google.firebase:firebase-firestore:24.6.1'
-// Added BOM for consistent versions
+//// Added BOM for consistent versions
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4' // Updated from 1.1.1

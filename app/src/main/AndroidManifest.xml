@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Required for Firebase Authentication -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,8 +16,22 @@
         android:theme="@style/Theme.DripDropApp"
         tools:targetApi="31">
 
-        <activity android:name=".RegisterActivity"/>
-        <activity android:name=".LoginActivity"/>
+        <!-- Register screen -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <!-- Login screen -->
+        <activity android:name=".LoginActivity" />
+
+        <!-- Account option screen -->
+        <activity android:name=".AccountOptionActivity" />
+
+        <!-- Introduction screen (launcher) -->
         <activity
             android:name=".IntroductionActivity"
             android:exported="true">
@@ -26,9 +43,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".AccountOptionActivity" />
 
+        <!-- ✅ Shopping screen -->
+        <activity android:name=".ShoppingActivity" />
 
     </application>
 
 </manifest>
+
