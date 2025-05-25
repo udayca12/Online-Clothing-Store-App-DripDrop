@@ -34,9 +34,9 @@
     <!-- Logo (centered on ellipse, above brand name) -->
     <ImageView
         android:id="@+id/logoDripDrop"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logo_dripdrop"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/drip_drop2"
         android:contentDescription="@string/logo_desc"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"

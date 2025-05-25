@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="@drawable/blury_background"
     android:fillViewport="true">
 
     <LinearLayout
@@ -25,7 +25,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/ic_profile"
-                android:layout_gravity="start" />
+                android:contentDescription="Profile" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -38,7 +38,8 @@
                     android:layout_width="42dp"
                     android:layout_height="38dp"
                     android:src="@drawable/drip_drop2"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Logo" />
 
                 <TextView
                     android:id="@+id/tvShoppingTitle"
@@ -55,7 +56,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/ic_cart"
-                android:layout_gravity="end" />
+                android:contentDescription="Cart" />
         </LinearLayout>
 
         <!-- Category Dropdown -->
@@ -85,48 +86,62 @@
 
             <!-- T-Shirt -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llMensTshirt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/mens_tshirt"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Men's T-Shirt" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="T-Shirt"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
 
             <!-- Jacket -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llMensJacket"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/mens_jacket"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Men's Jacket" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jacket"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -140,48 +155,62 @@
 
             <!-- Jeans -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llMensJeans"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/mens_jeans"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Men's Jeans" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jeans"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
 
             <!-- Shoes -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llMensShoes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/mens_shoes"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Men's Shoes" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Shoes"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -204,48 +233,62 @@
 
             <!-- Dress -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llWomensDress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/womens_dress"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Women's Dress" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dress"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
 
             <!-- Top -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llWomensTop"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/womens_tshirts"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Women's Top" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Top"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -259,48 +302,62 @@
 
             <!-- Jeans -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llWomensJeans"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/womens_jeans"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Women's Jeans" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jeans"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
 
             <!-- Heels -->
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_weight="1"
+                android:id="@+id/llWomensHeels"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="8dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:background="@drawable/clickable_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/womens_heels"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/edittext_bg" />
+                    android:contentDescription="Women's Heels" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Heels"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

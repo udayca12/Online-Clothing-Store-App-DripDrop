@@ -4,15 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    android:background="@drawable/blury_background">
 
     <!-- App Logo -->
     <ImageView
         android:id="@+id/registerLogo"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/logo_dripdrop"
+        android:src="@drawable/drip_drop2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
