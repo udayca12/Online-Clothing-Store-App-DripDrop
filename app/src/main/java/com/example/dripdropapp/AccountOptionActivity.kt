@@ -1,13 +1,13 @@
-package com.example.dripdropapp.activities
+package com.example.dripdropapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import com.example.dripdropapp.R
 
-class ShoppingActivity : AppCompatActivity() {
+class AccountOptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_shopping)
+        setContentView(R.layout.activity_account_option)
     }
 }

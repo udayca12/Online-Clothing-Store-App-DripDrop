@@ -4,5 +4,5 @@ import androidx.fragment.app.Fragment
 
 import com.example.dripdropapp.R
 
-class Introduction_fragment : Fragment(R.layout.fragment_intoduction) {
+class Introduction_fragment : Fragment(R.layout.activity_introduction) {
 }
