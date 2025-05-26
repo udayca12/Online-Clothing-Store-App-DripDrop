@@ -59,6 +59,7 @@
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="22sp"
+
             android:textColor="#CE93D8"
             android:fontFamily="@font/poppins_regular"/>
 
@@ -71,12 +72,18 @@
             app:layout_constraintTop_toBottomOf="@id/DontHaveAccount"
             style="@style/editText"
             android:hint="Email"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:background="@drawable/edittext_bg"
             android:inputType="textEmailAddress"
             android:layout_marginTop="50dp"/>
 
         <EditText
             android:id="@+id/edPassword"
             android:layout_width="0dp"
+            android:textColorHint="#888888"
+            android:background="@drawable/edittext_bg"
+            android:textColor="#000000"
             android:layout_height="@dimen/editTextHeight"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
@@ -109,12 +116,12 @@
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             android:layout_marginTop="4dp"
-            android:text="Forgot Password"
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="18sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/poppins_regular"/>
+            android:fontFamily="@font/poppins_regular"
+            />
 
 
 

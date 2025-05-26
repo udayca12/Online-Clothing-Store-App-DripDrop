@@ -46,6 +46,8 @@
 
         <!-- ✅ Shopping screen -->
         <activity android:name=".ShoppingActivity" />
+        <activity android:name=".UserAccount" />
+
 
     </application>
 

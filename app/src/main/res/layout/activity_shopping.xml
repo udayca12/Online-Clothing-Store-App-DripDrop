@@ -14,6 +14,7 @@
 
         <!-- Navbar -->
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -25,7 +26,10 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/ic_profile"
-                android:contentDescription="Profile" />
+                android:contentDescription="Profile"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -64,6 +68,7 @@
             android:id="@+id/spinnerCategories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="25dp"
             android:background="@drawable/edittext_bg"
             android:layout_marginTop="8dp" />
 
@@ -72,12 +77,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Men's Collection"
+            android:textColor="#5C5B5B"
             android:textStyle="bold"
             android:textSize="20sp"
+
             android:layout_marginTop="24dp" />
 
         <!-- Men's Items Row 1 -->
         <LinearLayout
+            android:background="@drawable/button_gradient_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -86,6 +94,7 @@
 
             <!-- T-Shirt -->
             <LinearLayout
+
                 android:id="@+id/llMensTshirt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -108,6 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="T-Shirt"
+                    android:textColor="#5C5B5B"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
@@ -140,21 +150,26 @@
                     android:text="Jacket"
                     android:textStyle="bold"
                     android:textSize="16sp"
+                    android:textColor="#5C5B5B"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="4dp"/>
             </LinearLayout>
         </LinearLayout>
 
         <!-- Men's Items Row 2 -->
+
         <LinearLayout
+            android:background="@drawable/button_gradient_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+
             android:weightSum="2">
 
             <!-- Jeans -->
             <LinearLayout
+
                 android:id="@+id/llMensJeans"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -178,6 +193,7 @@
                     android:layout_height="wrap_content"
                     android:text="Jeans"
                     android:textStyle="bold"
+                    android:textColor="#5C5B5B"
                     android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="4dp"/>
@@ -209,6 +225,7 @@
                     android:text="Shoes"
                     android:textStyle="bold"
                     android:textSize="16sp"
+                    android:textColor="#5C5B5B"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="4dp"/>
             </LinearLayout>
@@ -216,15 +233,18 @@
 
         <!-- WOMEN'S COLLECTION -->
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Women's Collection"
             android:textStyle="bold"
             android:textSize="20sp"
+            android:textColor="#5C5B5B"
             android:layout_marginTop="24dp" />
 
         <!-- Women's Items Row 1 -->
         <LinearLayout
+            android:background="@drawable/button_gradient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -234,6 +254,7 @@
             <!-- Dress -->
             <LinearLayout
                 android:id="@+id/llWomensDress"
+
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -249,6 +270,7 @@
                     android:layout_height="150dp"
                     android:src="@drawable/womens_dress"
                     android:scaleType="centerCrop"
+
                     android:contentDescription="Women's Dress" />
 
                 <TextView
@@ -257,6 +279,7 @@
                     android:text="Dress"
                     android:textStyle="bold"
                     android:textSize="16sp"
+                    android:textColor="#5C5B5B"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="4dp"/>
             </LinearLayout>
@@ -287,6 +310,7 @@
                     android:text="Top"
                     android:textStyle="bold"
                     android:textSize="16sp"
+                    android:textColor="#5C5B5B"
                     android:layout_gravity="center_horizontal"
                     android:paddingTop="4dp"/>
             </LinearLayout>
@@ -294,10 +318,11 @@
 
         <!-- Women's Items Row 2 -->
         <LinearLayout
+            android:background="@drawable/button_gradient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:weightSum="2">
 
             <!-- Jeans -->
@@ -324,6 +349,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jeans"
+                    android:textColor="#5C5B5B"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_gravity="center_horizontal"
@@ -354,6 +380,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Heels"
+                    android:textColor="#5C5B5B"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_gravity="center_horizontal"

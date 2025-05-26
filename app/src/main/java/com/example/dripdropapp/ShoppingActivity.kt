@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Spinner
+import android.content.Intent
 import android.widget.TextView
 
 class ShoppingActivity : AppCompatActivity() {
@@ -52,5 +53,10 @@ class ShoppingActivity : AppCompatActivity() {
         llWomensTop.startAnimation(zoomIn)
         llWomensJeans.startAnimation(zoomIn)
         llWomensHeels.startAnimation(zoomIn)
+
+        ivProfile.setOnClickListener {
+            val intent = Intent(this, UserAccount::class.java)
+            startActivity(intent)
+        }
     }
 }
