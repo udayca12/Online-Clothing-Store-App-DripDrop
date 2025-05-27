@@ -59,9 +59,10 @@
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="22sp"
-
             android:textColor="#CE93D8"
-            android:fontFamily="@font/poppins_regular"/>
+            android:fontFamily="@font/poppins_regular"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <EditText
             android:id="@+id/edEmailLogin"

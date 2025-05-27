@@ -44,6 +44,13 @@ class LoginActivity : AppCompatActivity() {
         forgot.startAnimation(slideIn)
         loginBtn.startAnimation(slideIn)
 
+        //Setting on click listener for Register now Text
+        val registerTextView: TextView = findViewById(R.id.DontHaveAccount)
+        registerTextView.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
         loginBtn.setOnClickListener {
             loginBtn.startAnimation(buttonPress)
 
@@ -72,6 +79,7 @@ class LoginActivity : AppCompatActivity() {
                         }
                     }
             }, 200)
+
         }
     }
 }
