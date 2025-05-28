@@ -31,6 +31,9 @@
         <!-- Account option screen -->
         <activity android:name=".AccountOptionActivity" />
 
+        <!-- For Products to be displayed-->
+        <activity android:name=".ProductDisplayActivity" />
+
         <!-- Introduction screen (launcher) -->
         <activity
             android:name=".IntroductionActivity"

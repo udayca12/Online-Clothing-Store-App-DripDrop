@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'com.google.gms.google-services'
 }
-
+apply plugin: 'kotlin-kapt'
 android {
     namespace 'com.example.dripdropapp'
     compileSdk 32
@@ -53,6 +53,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-bom:30.5.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
     implementation 'com.google.firebase:firebase-firestore:24.6.1'
+    
+    //Firebase for realtime database and to load images
+    implementation 'com.google.firebase:firebase-database-ktx:20.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    kapt 'com.github.bumptech.glide:compiler:4.16.0'
+
+    
+    
 //// Added BOM for consistent versions
 
     testImplementation 'junit:junit:4.13.2'

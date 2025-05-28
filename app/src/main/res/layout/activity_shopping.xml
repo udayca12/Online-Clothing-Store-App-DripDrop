@@ -63,14 +63,7 @@
                 android:contentDescription="Cart" />
         </LinearLayout>
 
-        <!-- Category Dropdown -->
-        <Spinner
-            android:id="@+id/spinnerCategories"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="25dp"
-            android:background="@drawable/edittext_bg"
-            android:layout_marginTop="8dp" />
+
 
         <!-- MEN'S COLLECTION -->
         <TextView
@@ -191,7 +184,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jeans"
+                    android:text="Men's Jeans"
                     android:textStyle="bold"
                     android:textColor="#5C5B5B"
                     android:textSize="16sp"
@@ -348,7 +341,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jeans"
+                    android:text="Women's Jeans"
                     android:textColor="#5C5B5B"
                     android:textStyle="bold"
                     android:textSize="16sp"

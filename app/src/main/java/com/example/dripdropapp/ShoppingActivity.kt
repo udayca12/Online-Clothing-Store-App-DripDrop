@@ -1,62 +1,51 @@
 package com.example.dripdropapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.Spinner
-import android.content.Intent
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class ShoppingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping)
 
-        // Load animations
+        // Animation code (if any)
         val fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-        val slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_bottom)
-        val zoomIn = AnimationUtils.loadAnimation(this, R.anim.zoom_in)
+        findViewById<ImageView>(R.id.ivProfile).startAnimation(fadeIn)
 
-        // Navbar Elements
-        val ivProfile = findViewById<ImageView>(R.id.ivProfile)
-        val ivCart = findViewById<ImageView>(R.id.ivCart)
-        val tvTitle = findViewById<TextView>(R.id.tvShoppingTitle)
+        // Profile click listener
+        findViewById<ImageView>(R.id.ivProfile).setOnClickListener {
+            startActivity(Intent(this, UserAccount::class.java))
+        }
 
-        // Category Spinner
-        val spinnerCategories = findViewById<Spinner>(R.id.spinnerCategories)
 
-        // Sections (Men & Women)
-        val llMensTshirt = findViewById<LinearLayout>(R.id.llMensTshirt)
-        val llMensJacket = findViewById<LinearLayout>(R.id.llMensJacket)
-        val llMensJeans = findViewById<LinearLayout>(R.id.llMensJeans)
-        val llMensShoes = findViewById<LinearLayout>(R.id.llMensShoes)
-        val llWomensDress = findViewById<LinearLayout>(R.id.llWomensDress)
-        val llWomensTop = findViewById<LinearLayout>(R.id.llWomensTop)
-        val llWomensJeans = findViewById<LinearLayout>(R.id.llWomensJeans)
-        val llWomensHeels = findViewById<LinearLayout>(R.id.llWomensHeels)
 
-        // Apply animations
-        ivProfile.startAnimation(fadeIn)
-        ivCart.startAnimation(fadeIn)
-        tvTitle.startAnimation(zoomIn)
+        // Category click listeners
+        setupCategoryClick(R.id.llMensTshirt, "tshirts")
+        setupCategoryClick(R.id.llMensJacket, "Jackets")
+        setupCategoryClick(R.id.llMensJeans, "Jeans")
+        setupCategoryClick(R.id.llMensShoes, "Shoes")
+        setupCategoryClick(R.id.llWomensDress, "WomensDress")
+        setupCategoryClick(R.id.llWomensTop, "WomensTop")
+        setupCategoryClick(R.id.llWomensJeans, "WomensJeans")
+        setupCategoryClick(R.id.llWomensHeels, "WomensHeels")
+    }
 
-        spinnerCategories.startAnimation(slideIn)
-
-        llMensTshirt.startAnimation(zoomIn)
-        llMensJacket.startAnimation(zoomIn)
-        llMensJeans.startAnimation(zoomIn)
-        llMensShoes.startAnimation(zoomIn)
-
-        llWomensDress.startAnimation(zoomIn)
-        llWomensTop.startAnimation(zoomIn)
-        llWomensJeans.startAnimation(zoomIn)
-        llWomensHeels.startAnimation(zoomIn)
-
-        ivProfile.setOnClickListener {
-            val intent = Intent(this, UserAccount::class.java)
-            startActivity(intent)
+    private fun setupCategoryClick(layoutId: Int, firebaseCategoryKey: String) {
+        findViewById<LinearLayout>(layoutId).setOnClickListener {
+            openProductDisplay(firebaseCategoryKey)
         }
     }
+
+    private fun openProductDisplay(category: String) {
+        val intent = Intent(this, ProductDisplayActivity::class.java)
+        intent.putExtra("CATEGORY", category)
+        startActivity(intent)
+    }
+
+
+
 }
