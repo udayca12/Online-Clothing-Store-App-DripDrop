@@ -23,9 +23,23 @@
     <color name="g_gray500">#969899</color>
     <color name="g_orange_yellow">#F8BA00</color>
     <color name="g_green">#11FF00</color>
-
+    <color name="green_500">#4CAF50</color>
+    <color name="green_700">#388E3C</color>
+    <color name="green_accent">#69F0AE</color>
     <!-- Example: A nice blue primary color -->
     <color name="colorPrimary">#1976D2</color>
     <!-- You can also define your accent color here -->
     <color name="colorAccent">#FF4081</color>
+
+
+
+
+    <!-- Material Design Red 500 -->
+    <color name="red_500">#f44336</color>
+    <!-- Bright Red (Web Standard) -->
+    <color name="red">#FF0000</color>
+    <!-- Accent Red (Material) -->
+    <color name="red_accent">#FF2C2C</color>
+    <!-- Dark Red (Material) -->
+    <color name="red_700">#d32f2f</color>
 </resources>

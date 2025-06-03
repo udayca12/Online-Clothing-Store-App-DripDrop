@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvCartTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Cart"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Cart Items Scrollable Area -->
+        <ScrollView
+            android:id="@+id/scrollViewCart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCartTitle"
+            app:layout_constraintBottom_toTopOf="@id/checkoutBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/cartItemsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+        </ScrollView>
+
+        <!-- Checkout Bar -->
+        <LinearLayout
+            android:id="@+id/checkoutBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/button_gradient"
+            android:gravity="center_vertical"
+            android:padding="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="8dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total: ₹0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/montserrat_bold"/>
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/button_gradient_login"
+                android:text="Checkout"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:elevation="4dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

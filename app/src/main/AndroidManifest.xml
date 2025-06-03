@@ -34,6 +34,11 @@
         <!-- For Products to be displayed-->
         <activity android:name=".ProductDisplayActivity" />
 
+        <activity android:name=".ProductDetailActivity" />
+
+        <activity android:name=".CartActivity"/>
+
+
         <!-- Introduction screen (launcher) -->
         <activity
             android:name=".IntroductionActivity"

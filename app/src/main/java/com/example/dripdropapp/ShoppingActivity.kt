@@ -20,8 +20,9 @@ class ShoppingActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.ivProfile).setOnClickListener {
             startActivity(Intent(this, UserAccount::class.java))
         }
-
-
+        findViewById<ImageView>(R.id.ivCart).setOnClickListener {
+            startActivity(Intent(this, CartActivity::class.java))
+        }
 
         // Category click listeners
         setupCategoryClick(R.id.llMensTshirt, "tshirts")
