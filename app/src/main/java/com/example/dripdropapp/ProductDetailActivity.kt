@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.example.dripdropapp.Product
+
 
 class ProductDetailActivity : AppCompatActivity() {
 
@@ -27,9 +29,10 @@ class ProductDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tshirt) // or activity_detailed
+        setContentView(R.layout.activity_product_detail) // XML file used for all categories
 
-        ivProductImage = findViewById(R.id.ivProductImage) // Add this ImageView in your XML
+        // Bind views
+        ivProductImage = findViewById(R.id.ivProductImage)
         tvProductName = findViewById(R.id.tvProductName)
         tvPrice = findViewById(R.id.tvPrice)
         sizeGroup = findViewById(R.id.sizeGroup)
@@ -39,11 +42,13 @@ class ProductDetailActivity : AppCompatActivity() {
         btnAddToCart = findViewById(R.id.btnAddToCart)
         btnBuyNow = findViewById(R.id.btnBuyNow)
 
+        // Get intent data
         category = intent.getStringExtra("CATEGORY") ?: ""
         productKey = intent.getStringExtra("PRODUCT_KEY") ?: ""
 
         fetchProductDetails()
 
+        // Size selector
         sizeGroup.setOnCheckedChangeListener { _, checkedId ->
             selectedSize = when (checkedId) {
                 R.id.rbSizeS -> "S"
@@ -54,17 +59,20 @@ class ProductDetailActivity : AppCompatActivity() {
             }
         }
 
+        // Quantity buttons
         btnMinus.setOnClickListener {
             if (quantity > 1) {
                 quantity--
                 tvQuantity.text = quantity.toString()
             }
         }
+
         btnPlus.setOnClickListener {
             quantity++
             tvQuantity.text = quantity.toString()
         }
 
+        // Button actions
         btnAddToCart.setOnClickListener { addToCart() }
         btnBuyNow.setOnClickListener { buyNow() }
     }
@@ -73,12 +81,13 @@ class ProductDetailActivity : AppCompatActivity() {
         val ref = FirebaseDatabase.getInstance().getReference("products")
             .child(category)
             .child(productKey)
+
         ref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 product = snapshot.getValue(Product::class.java) ?: return
                 tvProductName.text = product.name
                 tvPrice.text = "₹${product.price}"
-                // Load single image
+
                 if (product.image.isNotEmpty()) {
                     Glide.with(this@ProductDetailActivity)
                         .load(product.image)
@@ -89,7 +98,10 @@ class ProductDetailActivity : AppCompatActivity() {
                     ivProductImage.setImageResource(R.drawable.blury_background)
                 }
             }
-            override fun onCancelled(error: DatabaseError) {}
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@ProductDetailActivity, "Failed to load product.", Toast.LENGTH_SHORT).show()
+            }
         })
     }
 
@@ -99,21 +111,27 @@ class ProductDetailActivity : AppCompatActivity() {
             Toast.makeText(this, "Please log in to add to cart", Toast.LENGTH_SHORT).show()
             return
         }
+
         val cartRef = FirebaseDatabase.getInstance().getReference("carts")
             .child(user.uid)
             .push()
+
         val cartItem = CartItem(
             productId = productKey,
+            category = category,
             size = selectedSize,
             quantity = quantity
         )
+
         cartRef.setValue(cartItem).addOnSuccessListener {
             Toast.makeText(this, "Product added to cart", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener {
+            Toast.makeText(this, "Failed to add product to cart", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun buyNow() {
-        Toast.makeText(this, "Proceed to buy now (implement checkout)", Toast.LENGTH_SHORT).show()
-        // Implement checkout navigation here
+        Toast.makeText(this, "Proceed to buy now (feature coming soon)", Toast.LENGTH_SHORT).show()
+        // Navigate to checkout activity if implemented
     }
 }

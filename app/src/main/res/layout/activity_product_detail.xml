@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blury_background">
@@ -14,47 +13,51 @@
         <!-- Product Image -->
         <ImageView
             android:id="@+id/ivProductImage"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="500dp"
             android:scaleType="centerCrop"
+            android:contentDescription="Product Image"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="Product Image"/>
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Product Name -->
         <TextView
             android:id="@+id/tvProductName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/ivProductImage"
-            android:text="Premium Cotton T-Shirt"
+            android:text="Product Name"
             android:textSize="24sp"
             android:textColor="#222222"
             android:fontFamily="@font/montserrat_bold"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/ivProductImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Product Price -->
         <TextView
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvProductName"
             android:text="₹599"
             android:textSize="20sp"
             android:textColor="#CE93D8"
             android:fontFamily="@font/poppins_medium"
             android:layout_marginTop="8dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/tvProductName"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Size Selector -->
         <RadioGroup
             android:id="@+id/sizeGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvPrice"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <RadioButton
                 android:id="@+id/rbSizeS"
@@ -62,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="S"
                 android:textColor="@color/black"
-                style="@style/SizeRadioButton"/>
+                style="@style/SizeRadioButton" />
 
             <RadioButton
                 android:id="@+id/rbSizeM"
@@ -70,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="M"
                 android:textColor="@color/black"
-                style="@style/SizeRadioButton"/>
+                style="@style/SizeRadioButton" />
 
             <RadioButton
                 android:id="@+id/rbSizeL"
@@ -78,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:text="L"
                 android:textColor="@color/black"
-                style="@style/SizeRadioButton"/>
+                style="@style/SizeRadioButton" />
 
             <RadioButton
                 android:id="@+id/rbSizeXL"
@@ -86,25 +89,27 @@
                 android:layout_height="wrap_content"
                 android:text="XL"
                 android:textColor="@color/black"
-                style="@style/SizeRadioButton"/>
+                style="@style/SizeRadioButton" />
         </RadioGroup>
 
         <!-- Quantity Selector -->
         <LinearLayout
             android:id="@+id/quantitySelector"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/sizeGroup"
             android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/sizeGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <Button
                 android:id="@+id/btnMinus"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:text="-"
-                style="@style/QuantityButton"/>
+                style="@style/QuantityButton" />
 
             <TextView
                 android:id="@+id/tvQuantity"
@@ -113,36 +118,41 @@
                 android:text="1"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btnPlus"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:text="+"
-                style="@style/QuantityButton"/>
+                style="@style/QuantityButton" />
         </LinearLayout>
 
         <!-- Add to Cart Button -->
         <Button
             android:id="@+id/btnAddToCart"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="55dp"
-            app:layout_constraintTop_toBottomOf="@id/quantitySelector"
             android:text="Add to Cart"
-            style="@style/Button.Gradient"
             app:backgroundTint="@null"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginTop="24dp"
+            style="@style/Button.Gradient"
+            app:layout_constraintTop_toBottomOf="@id/quantitySelector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Buy Now Button -->
         <Button
             android:id="@+id/btnBuyNow"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="55dp"
-            app:layout_constraintTop_toBottomOf="@id/btnAddToCart"
             android:text="Buy Now"
-            style="@style/Button.Outline"
             app:backgroundTint="@null"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            style="@style/Button.Outline"
+            app:layout_constraintTop_toBottomOf="@id/btnAddToCart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
